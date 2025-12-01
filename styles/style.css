@@ -11,26 +11,34 @@
 */
 
 .page {
-  background-image: url(../images/background.png);
+  align-self: start;
   font-family: var(--page-main-font-family);
+  min-block-size: 100dvh;
   min-inline-size: 320px;
-  min-block-size: 100dvb;
 }
-.header{
+.header-background{
+  position: absolute;
+  top:0px;
+  z-index: -1;
+  width: 1440px;
+  height: clamp(667px, calc(100vw / 2), 960px);
+  background-image: url("../images/background.png");
+}
+.header_box{
+  justify-self: center;
   width: var(--header-width);
   height: clamp(327px 368px);
-  justify-self: center;
   margin: 100px 0 102px 0;
-  background-color: var(--header-background-color);
   border: 2px solid black;
   font-family: var(--page-accent-font-family);
   text-transform: uppercase;
+  background-color: var(--header-background-color);
 }
 .header_text-box{
-  margin: var(--header-side-margins-for-text-box);
   display: flex;
   flex-direction: column;
-  align-items: center;   
+  align-items: center;
+  margin: var(--header-side-margins-for-text-box);   
 }
 .header_title{
   font-size: var(--header-title-font-size);
@@ -53,8 +61,8 @@
   flex-direction: column;
   width: var(--card-width);
   border: 2px solid black;
-  background-color: var(--card-background-color);
   font-size: var(--card-font-size);
+  background-color: var(--card-background-color);
 }
 .card-title{
   font-size: inherit;
@@ -62,15 +70,15 @@
 
 .card_watermark{
   position:absolute;
-  left: 300px;
   bottom: 90px;
+  left: 300px;
   color: red;
 }
 .card_image{
-  width: inherit;
+  width: 100%;
   height: var(--card-image-height);
   object-fit: cover;
-  object-position: center;
+  object-position: right;
   overflow: hidden;
 }
 .card_text-box{
