@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root{
+  --page-main-font-family:Inter, monospace;
+  --page-accent-font-family:PressStart2P, arial;
+  --page-card-header-font-weight: 700;
+  --page-card-text-font-weight: 400;
+
+  --header-width: clamp(375px,  calc(100vw / 2.06), 700px);
+  --header-background-color: white;
+  --header-side-margins-for-text-box: 120px clamp(14px,calc(100vw / 11.95),120.5px);
+  --header-title-font-size: clamp(49px, calc(100vw / 22.15), 65px);
+  --header-text-size: calc(100vw / 62.6);
+
+  --card-width: var(--header-width);
+  --card-background-color: var(--header-background-color);
+  --card-image-height:  clamp(371px,  calc(100vw / 2.06), 696px);
+  --card-font-size: 18px;
+}
