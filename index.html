@@ -27,7 +27,11 @@
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
         <div class="card-image-watermark-box">
-          <img class="card_image" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;/HTML&gt;</p>
         </div>
         <section class="card_text-box">
@@ -83,7 +87,11 @@
       <div class="card">
         <h2 class="card-title">1 спринт: Я — чистый лист</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image saturation_less" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image saturation_less"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;/HTML&gt;</p>
         </div>
         <section class="card_text-box">
@@ -141,7 +149,11 @@
       <div class="card">
         <h2 class="card-title">1 спринт: А если не получится?</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image saturation_more" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image saturation_more"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;css&gt;</p>
         </div>
         <section class="card_text-box">
@@ -197,7 +209,11 @@
       <div class="card">
         <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image inverse_less" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image inverse_less"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;decigions&gt;</p>
         </div>
         <section class="card_text-box">
@@ -255,7 +271,11 @@
       <div class="card">
         <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image inverse_more" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image inverse_more"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">care</p>
         </div>
         <section class="card_text-box">
@@ -314,7 +334,11 @@
       <div class="card">
         <h2 class="card-title">3 спринт: Обходные стратегии</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image gray" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image gray"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;support&gt;</p>
         </div>
         <section class="card_text-box">
@@ -370,7 +394,11 @@
       <div class="card">
         <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image blur" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image blur"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;life-style: none;&gt;</p>
         </div>
         <section class="card_text-box">
@@ -428,7 +456,11 @@
       <div class="card">
         <h2 class="card-title">«Сейчас я здесь»</h2>
         <div class="card-image-watermark-box">
-          <img class="card_image final" src="../images/bus.png" alt="Пиксельный грузовик из американского фильма" />
+          <img
+            class="card_image final"
+            src="../images/bus.png"
+            alt="Пиксельный грузовик из американского фильма"
+          />
           <p class="card_watermark">&lt;experience&gt;</p>
         </div>
         <section class="card_text-box">
@@ -486,11 +518,7 @@
         </section>
       </div>
       <div class="element">
-        <button
-          type="button"
-          onclick="document.getElementById('dialog').showModal();"
-          class="button main__save-button"
-        >
+        <button type="button" class="button main__save-button" id="save-button">
           <svg class="save-icon" viewBox="0 0 39 39">
             <use href="./svg/floppy.svg" />
           </svg>
@@ -505,14 +533,28 @@
         </svg>
         <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
-      <button
-        type="button"
-        onclick="document.getElementById('dialog').close();"
-        class="button dialog__ok-button"
-      >
+      <button type="button" class="button dialog__ok-button" id="ok-button">
         <span class="button__text dialog__ok-text">OK</span>
       </button>
     </dialog>
+
+    <script>
+      // Функция для кнопки "Сохранить на память"
+      document
+        .getElementById("save-button")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Предотвращаем перезагрузку
+          document.getElementById("dialog").showModal();
+        });
+
+      // Функция для кнопки "OK" в диалоге
+      document
+        .getElementById("ok-button")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Предотвращаем перезагрузку
+          document.getElementById("dialog").close();
+        });
+    </script>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
