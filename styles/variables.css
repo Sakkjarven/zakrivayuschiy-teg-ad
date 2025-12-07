@@ -1,8 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root{
-    --background-image: 
-    /* 1. Горизонтальные полосы (слева направо) */
-    repeating-linear-gradient(
+:root {
+  --background-image: 
+    /* 1. Горизонтальные полосы (слева направо) */ repeating-linear-gradient(
       90deg,
       #d3d3d3,
       #d3d3d3 2px,
@@ -10,49 +9,50 @@
       transparent 4px
     ),
     /* 2. Вертикальные полосы (сверху вниз) */
-    repeating-linear-gradient(
-      0deg,
-      #d3d3d3,
-      #d3d3d3 2px,
-      transparent 2px,
-      transparent 4px
-    ),
+      repeating-linear-gradient(
+        0deg,
+        #d3d3d3,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
     /* 3. Основной вертикальный градиент с изменением насыщенности */
-    linear-gradient(
-      to bottom,
-      #e7e7e7 0%,
-      #e7e7e7 20%,
-      #d9d9d9 30%,
-      #b3b3b3 45%,
-      #8c8c8c 60%,
-      #666666 75%,
-      #404040 85%,
-      #1a1a1a 95%,
-      #1a1a1a 100%
-    );
+      linear-gradient(
+        to bottom,
+        #e7e7e7 0%,
+        #e7e7e7 20%,
+        #d9d9d9 30%,
+        #b3b3b3 45%,
+        #8c8c8c 60%,
+        #666666 75%,
+        #404040 85%,
+        #1a1a1a 95%,
+        #1a1a1a 100%
+      );
   --accent-color: #000;
   --bg-color: #fff;
-  
-  --page-main-font-family:Inter, monospace;
-  --page-accent-font-family:PressStart2P, arial;
+  --card-text-weight: 400;
+
+  --page-main-font-family: Inter;
+  --page-accent-font-family: PressStart2P, arial;
   --page-card-header-font-weight: 700;
   --page-card-text-font-weight: 400;
 
-  --header-width: clamp(375px,  calc(100vw / 2.06), 700px);
+  --header-width: clamp(375px, calc(100vw / 2.06), 700px);
   --header-background-color: white;
-  --header-side-margins-for-text-box: 120px clamp(14px,calc(100vw / 11.95),120.5px);
+  --header-side-margins-for-text-box: 120px
+    clamp(14px, calc(100vw / 11.95), 120.5px);
   --header-title-font-size: clamp(49px, calc(100vw / 22.15), 65px);
   --header-text-size: calc(100vw / 62.6);
 
   --card-width: var(--header-width);
   --card-background-color: var(--header-background-color);
-  --card-image-height:  clamp(371px,  calc(100vw / 2.06), 696px);
+  --card-image-height: clamp(371px, calc(100vw / 2.06), 696px);
   --card-font-size: 18px;
 
   --contour-color: #000;
-	--heart-core-color: #fff;
-	--sparks-color: #ff0000;
+  --heart-core-color: #fff;
+  --sparks-color: #ff0000;
   --accent-color: #000;
   --backdrop-color: rgb(0 0 0 / 0.75);
-
 }
